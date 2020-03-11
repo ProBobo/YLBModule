@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'YLBModule_Example' do
+  pod 'YLBModule', :path => '../'
+
+  target 'YLBModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
