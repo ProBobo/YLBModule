@@ -1,0 +1,6 @@
+framework module YLBModule {
+  umbrella header "YLBModule-umbrella.h"
+
+  export *
+  module * { export * }
+}
