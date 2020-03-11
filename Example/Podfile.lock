@@ -1,0 +1,16 @@
+PODS:
+  - YLBModule (0.1.0)
+
+DEPENDENCIES:
+  - YLBModule (from `../`)
+
+EXTERNAL SOURCES:
+  YLBModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YLBModule: b1a76cc3fce5077f1d0f123290c0aedc68487062
+
+PODFILE CHECKSUM: 17c196be782ac65cec8fabca8e137c9b476fa1f0
+
+COCOAPODS: 1.8.4
