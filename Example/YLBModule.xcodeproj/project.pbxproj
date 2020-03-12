@@ -13,7 +13,6 @@
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F5A7195388D20070C39A /* YLBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* YLBViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,10 +23,11 @@
 		86B166D3CDD4B15A9E98FC38 /* Pods_YLBModule_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F59C8F83430FF16D537BD5C /* Pods_YLBModule_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		BE3ABB37241A0167005911C0 /* YLBCustomAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB36241A0167005911C0 /* YLBCustomAppDelegate.m */; };
-		BE3ABB3B241A2042005911C0 /* YLBHomeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB3A241A2042005911C0 /* YLBHomeModule.m */; };
-		BE3ABB3E241A2154005911C0 /* YLBMyModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB3D241A2154005911C0 /* YLBMyModule.m */; };
-		BE3ABB41241A24F3005911C0 /* YLBTabTwoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB40241A24F3005911C0 /* YLBTabTwoModule.m */; };
-		BE3ABB48241A6ED9005911C0 /* YLBHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */; };
+		BE3ABB5B241A84EC005911C0 /* YLBTabTwoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB4E241A84EC005911C0 /* YLBTabTwoModule.m */; };
+		BE3ABB5C241A84EC005911C0 /* YLBMyModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB51241A84EC005911C0 /* YLBMyModule.m */; };
+		BE3ABB5D241A84EC005911C0 /* YLBHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB54241A84EC005911C0 /* YLBHomeController.m */; };
+		BE3ABB5E241A84EC005911C0 /* YLBHomeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB57241A84EC005911C0 /* YLBHomeModule.m */; };
+		BE3ABB5F241A84EC005911C0 /* YLBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB59241A84EC005911C0 /* YLBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,6 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* YLBModule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YLBModule-Prefix.pch"; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* YLBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* YLBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* YLBModule_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLBModule_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -70,16 +68,18 @@
 		A66A11566F32C313D62676A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BE3ABB35241A0166005911C0 /* YLBCustomAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBCustomAppDelegate.h; sourceTree = "<group>"; };
 		BE3ABB36241A0167005911C0 /* YLBCustomAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBCustomAppDelegate.m; sourceTree = "<group>"; };
-		BE3ABB39241A2042005911C0 /* YLBHomeModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBHomeModule.h; sourceTree = "<group>"; };
-		BE3ABB3A241A2042005911C0 /* YLBHomeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBHomeModule.m; sourceTree = "<group>"; };
-		BE3ABB3C241A2154005911C0 /* YLBMyModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBMyModule.h; sourceTree = "<group>"; };
-		BE3ABB3D241A2154005911C0 /* YLBMyModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBMyModule.m; sourceTree = "<group>"; };
-		BE3ABB3F241A24F3005911C0 /* YLBTabTwoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBTabTwoModule.h; sourceTree = "<group>"; };
-		BE3ABB40241A24F3005911C0 /* YLBTabTwoModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBTabTwoModule.m; sourceTree = "<group>"; };
-		BE3ABB45241A6E90005911C0 /* YLBServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBServices.h; sourceTree = "<group>"; };
-		BE3ABB46241A6ED9005911C0 /* YLBHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBHomeController.h; sourceTree = "<group>"; };
-		BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBHomeController.m; sourceTree = "<group>"; };
-		BE3ABB49241A6F0D005911C0 /* YLBHomeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBHomeProtocol.h; sourceTree = "<group>"; };
+		BE3ABB4B241A84EC005911C0 /* YLBServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBServices.h; sourceTree = "<group>"; };
+		BE3ABB4C241A84EC005911C0 /* YLBHomeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBHomeProtocol.h; sourceTree = "<group>"; };
+		BE3ABB4E241A84EC005911C0 /* YLBTabTwoModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBTabTwoModule.m; sourceTree = "<group>"; };
+		BE3ABB4F241A84EC005911C0 /* YLBTabTwoModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBTabTwoModule.h; sourceTree = "<group>"; };
+		BE3ABB51241A84EC005911C0 /* YLBMyModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBMyModule.m; sourceTree = "<group>"; };
+		BE3ABB52241A84EC005911C0 /* YLBMyModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBMyModule.h; sourceTree = "<group>"; };
+		BE3ABB54241A84EC005911C0 /* YLBHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBHomeController.m; sourceTree = "<group>"; };
+		BE3ABB55241A84EC005911C0 /* YLBHomeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBHomeModule.h; sourceTree = "<group>"; };
+		BE3ABB56241A84EC005911C0 /* YLBHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBHomeController.h; sourceTree = "<group>"; };
+		BE3ABB57241A84EC005911C0 /* YLBHomeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBHomeModule.m; sourceTree = "<group>"; };
+		BE3ABB59241A84EC005911C0 /* YLBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBViewController.m; sourceTree = "<group>"; };
+		BE3ABB5A241A84EC005911C0 /* YLBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBViewController.h; sourceTree = "<group>"; };
 		E192377B79EF2EE45D550FDF /* Pods-YLBModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLBModule_Example.release.xcconfig"; path = "Target Support Files/Pods-YLBModule_Example/Pods-YLBModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,24 +146,17 @@
 		6003F593195388D20070C39A /* Example for YLBModule */ = {
 			isa = PBXGroup;
 			children = (
+				BE3ABB4A241A84EC005911C0 /* YLBServices */,
+				BE3ABB53241A84EC005911C0 /* YLBHomeModule */,
+				BE3ABB50241A84EC005911C0 /* YLBMyModule */,
+				BE3ABB4D241A84EC005911C0 /* YLBTabTwoModule */,
+				BE3ABB58241A84EC005911C0 /* YLBViewModule */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* YLBViewController.h */,
-				6003F5A6195388D20070C39A /* YLBViewController.m */,
-				BE3ABB39241A2042005911C0 /* YLBHomeModule.h */,
-				BE3ABB3A241A2042005911C0 /* YLBHomeModule.m */,
-				BE3ABB3F241A24F3005911C0 /* YLBTabTwoModule.h */,
-				BE3ABB40241A24F3005911C0 /* YLBTabTwoModule.m */,
-				BE3ABB3C241A2154005911C0 /* YLBMyModule.h */,
-				BE3ABB3D241A2154005911C0 /* YLBMyModule.m */,
 				BE3ABB35241A0166005911C0 /* YLBCustomAppDelegate.h */,
 				BE3ABB36241A0167005911C0 /* YLBCustomAppDelegate.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				BE3ABB45241A6E90005911C0 /* YLBServices.h */,
-				BE3ABB46241A6ED9005911C0 /* YLBHomeController.h */,
-				BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */,
-				BE3ABB49241A6F0D005911C0 /* YLBHomeProtocol.h */,
 			);
 			name = "Example for YLBModule";
 			path = YLBModule;
@@ -218,6 +211,53 @@
 				6F9B2FF55C05DDF0DD7D0F98 /* Pods-YLBModule_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE3ABB4A241A84EC005911C0 /* YLBServices */ = {
+			isa = PBXGroup;
+			children = (
+				BE3ABB4B241A84EC005911C0 /* YLBServices.h */,
+				BE3ABB4C241A84EC005911C0 /* YLBHomeProtocol.h */,
+			);
+			path = YLBServices;
+			sourceTree = "<group>";
+		};
+		BE3ABB4D241A84EC005911C0 /* YLBTabTwoModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE3ABB4E241A84EC005911C0 /* YLBTabTwoModule.m */,
+				BE3ABB4F241A84EC005911C0 /* YLBTabTwoModule.h */,
+			);
+			path = YLBTabTwoModule;
+			sourceTree = "<group>";
+		};
+		BE3ABB50241A84EC005911C0 /* YLBMyModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE3ABB51241A84EC005911C0 /* YLBMyModule.m */,
+				BE3ABB52241A84EC005911C0 /* YLBMyModule.h */,
+			);
+			path = YLBMyModule;
+			sourceTree = "<group>";
+		};
+		BE3ABB53241A84EC005911C0 /* YLBHomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE3ABB54241A84EC005911C0 /* YLBHomeController.m */,
+				BE3ABB55241A84EC005911C0 /* YLBHomeModule.h */,
+				BE3ABB56241A84EC005911C0 /* YLBHomeController.h */,
+				BE3ABB57241A84EC005911C0 /* YLBHomeModule.m */,
+			);
+			path = YLBHomeModule;
+			sourceTree = "<group>";
+		};
+		BE3ABB58241A84EC005911C0 /* YLBViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				BE3ABB59241A84EC005911C0 /* YLBViewController.m */,
+				BE3ABB5A241A84EC005911C0 /* YLBViewController.h */,
+			);
+			path = YLBViewModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,13 +431,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3ABB41241A24F3005911C0 /* YLBTabTwoModule.m in Sources */,
-				BE3ABB3E241A2154005911C0 /* YLBMyModule.m in Sources */,
-				BE3ABB3B241A2042005911C0 /* YLBHomeModule.m in Sources */,
+				BE3ABB5B241A84EC005911C0 /* YLBTabTwoModule.m in Sources */,
+				BE3ABB5D241A84EC005911C0 /* YLBHomeController.m in Sources */,
+				BE3ABB5E241A84EC005911C0 /* YLBHomeModule.m in Sources */,
 				BE3ABB37241A0167005911C0 /* YLBCustomAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* YLBViewController.m in Sources */,
-				BE3ABB48241A6ED9005911C0 /* YLBHomeController.m in Sources */,
+				BE3ABB5F241A84EC005911C0 /* YLBViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				BE3ABB5C241A84EC005911C0 /* YLBMyModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
