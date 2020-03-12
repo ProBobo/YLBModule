@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "YLBAppDelegate.h"
+#import "YLBCustomAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([YLBAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([YLBCustomAppDelegate class]));
     }
 }

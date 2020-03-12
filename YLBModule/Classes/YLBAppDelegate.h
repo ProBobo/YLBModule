@@ -6,10 +6,9 @@
 //  Copyright (c) 2020 ProBobo. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import "YLBModuleManager.h"
 
-@interface YLBAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface YLBAppDelegate : UIResponder<YLBApplicationDelegate>
 
 @end
