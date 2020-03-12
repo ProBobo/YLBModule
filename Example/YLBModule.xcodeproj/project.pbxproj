@@ -27,6 +27,7 @@
 		BE3ABB3B241A2042005911C0 /* YLBHomeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB3A241A2042005911C0 /* YLBHomeModule.m */; };
 		BE3ABB3E241A2154005911C0 /* YLBMyModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB3D241A2154005911C0 /* YLBMyModule.m */; };
 		BE3ABB41241A24F3005911C0 /* YLBTabTwoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB40241A24F3005911C0 /* YLBTabTwoModule.m */; };
+		BE3ABB48241A6ED9005911C0 /* YLBHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,10 @@
 		BE3ABB3D241A2154005911C0 /* YLBMyModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBMyModule.m; sourceTree = "<group>"; };
 		BE3ABB3F241A24F3005911C0 /* YLBTabTwoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBTabTwoModule.h; sourceTree = "<group>"; };
 		BE3ABB40241A24F3005911C0 /* YLBTabTwoModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBTabTwoModule.m; sourceTree = "<group>"; };
+		BE3ABB45241A6E90005911C0 /* YLBServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBServices.h; sourceTree = "<group>"; };
+		BE3ABB46241A6ED9005911C0 /* YLBHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBHomeController.h; sourceTree = "<group>"; };
+		BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLBHomeController.m; sourceTree = "<group>"; };
+		BE3ABB49241A6F0D005911C0 /* YLBHomeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBHomeProtocol.h; sourceTree = "<group>"; };
 		E192377B79EF2EE45D550FDF /* Pods-YLBModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLBModule_Example.release.xcconfig"; path = "Target Support Files/Pods-YLBModule_Example/Pods-YLBModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +160,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				BE3ABB45241A6E90005911C0 /* YLBServices.h */,
+				BE3ABB46241A6ED9005911C0 /* YLBHomeController.h */,
+				BE3ABB47241A6ED9005911C0 /* YLBHomeController.m */,
+				BE3ABB49241A6F0D005911C0 /* YLBHomeProtocol.h */,
 			);
 			name = "Example for YLBModule";
 			path = YLBModule;
@@ -387,6 +396,7 @@
 				BE3ABB3B241A2042005911C0 /* YLBHomeModule.m in Sources */,
 				BE3ABB37241A0167005911C0 /* YLBCustomAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YLBViewController.m in Sources */,
+				BE3ABB48241A6ED9005911C0 /* YLBHomeController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

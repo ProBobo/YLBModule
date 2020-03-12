@@ -8,6 +8,8 @@
 
 #import "YLBHomeModule.h"
 #import <YLBModuleManager.h>
+#import <YLBServiceManager.h>
+#import "YLBHomeController.h"
 
 @interface YLBHomeModule ()<YLBModuleProtocol>
 
@@ -17,6 +19,7 @@
     [[YLBModuleManager sharedInstance] registerModuleClass:[self class]];
 }
 - (NSInteger)ylb_modulePriority {
+    [[YLBServiceManager sharedInstance] registerService:NSProtocolFromString(@"YLBHomeProtocol") implClass:[YLBHomeController class]];
     return 2000;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

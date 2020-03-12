@@ -7,6 +7,8 @@
 //
 
 #import "YLBViewController.h"
+#import "YLBServices.h"
+#import <YLBServiceManager.h>
 
 @interface YLBViewController ()
 
@@ -18,12 +20,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    id<YLBHomeProtocol>homeController = [[YLBServiceManager sharedInstance] createService:@protocol(YLBHomeProtocol)];
+    __weak __typeof(self)weakSelf = self;
+    [homeController setupSubviews:^{
+        NSLog(@"%@!!!",NSStringFromClass([weakSelf class]));
+    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 @end

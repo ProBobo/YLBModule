@@ -14,6 +14,7 @@
 #import "YLBApplicationDelegate.h"
 #import "YLBModuleManager.h"
 #import "YLBModuleProtocol.h"
+#import "YLBServiceManager.h"
 
 FOUNDATION_EXPORT double YLBModuleVersionNumber;
 FOUNDATION_EXPORT const unsigned char YLBModuleVersionString[];
