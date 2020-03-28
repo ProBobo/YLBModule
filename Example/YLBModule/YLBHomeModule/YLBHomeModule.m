@@ -13,7 +13,10 @@
 
 @interface YLBHomeModule ()<YLBModuleProtocol>
 
+//@property (strong, nonatomic) UIWindow *window;
+
 @end
+
 @implementation YLBHomeModule
 + (void)load {
     [[YLBModuleManager sharedInstance] registerModuleClass:[self class]];
@@ -23,6 +26,14 @@
     return 2000;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    YLBHomeController *vc = [YLBHomeController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    UIWindow *window = [YLBModuleManager sharedInstance].delegate.window;
+    window.rootViewController = nav;
     return YES;
 }
+//- (UIWindow *)window {
+////    return [[YLBModuleManager sharedInstance] window];
+//    return [YLBModuleManager sharedInstance].delegate.window;
+//}
 @end

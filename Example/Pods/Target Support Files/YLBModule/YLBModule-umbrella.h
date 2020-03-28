@@ -12,6 +12,7 @@
 
 #import "YLBAppDelegate.h"
 #import "YLBApplicationDelegate.h"
+#import "YLBModule.h"
 #import "YLBModuleManager.h"
 #import "YLBModuleProtocol.h"
 #import "YLBServiceManager.h"

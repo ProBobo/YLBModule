@@ -1,5 +1,5 @@
 PODS:
-  - YLBModule (0.1.0)
+  - YLBModule (0.2.0)
 
 DEPENDENCIES:
   - YLBModule (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YLBModule: ec30f016c1a4dc606637e4161a7c9271c0f2e675
+  YLBModule: 18ea2d791e8e5c672bdd9f39c711234935475e7c
 
 PODFILE CHECKSUM: 17c196be782ac65cec8fabca8e137c9b476fa1f0
 

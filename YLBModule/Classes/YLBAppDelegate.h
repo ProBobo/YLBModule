@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "YLBModuleManager.h"
 
-@interface YLBAppDelegate : UIResponder<YLBApplicationDelegate>
+@interface YLBAppDelegate : UIResponder<YLBApplicationDelegate>//引入YLBApplicationDelegate，相当于已经声明协议中对应的方法
 
 @end

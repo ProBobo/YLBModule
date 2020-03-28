@@ -33,6 +33,12 @@
     }
     return _moduleArray;
 }
+//- (UIWindow *)window {
+//    if (self.getUIWindow) {
+//        return self.getUIWindow();
+//    }
+//    return nil;
+//}
 #pragma mark - 注册模块类
 - (void)registerModuleClass:(Class)moduleClass {
     //注册的类不能为空

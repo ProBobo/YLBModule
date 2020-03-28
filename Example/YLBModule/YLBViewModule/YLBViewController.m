@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
     id<YLBHomeProtocol>homeController = [[YLBServiceManager sharedInstance] createService:@protocol(YLBHomeProtocol)];
     __weak __typeof(self)weakSelf = self;
     [homeController setupSubviews:^{

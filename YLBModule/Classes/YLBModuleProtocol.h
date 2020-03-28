@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol YLBModuleProtocol <NSObject,YLBApplicationDelegate>
 @optional
+@property (strong, nonatomic) UIWindow *window;
 //优先级
 - (NSInteger)ylb_modulePriority;
 

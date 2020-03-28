@@ -7,12 +7,22 @@
 //
 
 #import "YLBCustomAppDelegate.h"
+#import "YLBViewController.h"
+
+@interface YLBCustomAppDelegate ()<YLBModuleProtocol>
+
+@end
 
 @implementation YLBCustomAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//    __weak __typeof(self)weakSelf = self;
+//    [YLBModuleManager sharedInstance].getUIWindow = ^UIWindow * _Nonnull{
+//        return weakSelf.window;
+//    };
+    [YLBModuleManager sharedInstance].delegate = self;
     BOOL result = [super application:application didFinishLaunchingWithOptions:launchOptions];
     return result;
 }

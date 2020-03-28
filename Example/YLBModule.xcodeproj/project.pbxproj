@@ -80,6 +80,7 @@
 		BE3ABB57241A84EC005911C0 /* YLBHomeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBHomeModule.m; sourceTree = "<group>"; };
 		BE3ABB59241A84EC005911C0 /* YLBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBViewController.m; sourceTree = "<group>"; };
 		BE3ABB5A241A84EC005911C0 /* YLBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBViewController.h; sourceTree = "<group>"; };
+		BEBE778D242F63F5008C785E /* YLBModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLBModule.h; sourceTree = "<group>"; };
 		E192377B79EF2EE45D550FDF /* Pods-YLBModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLBModule_Example.release.xcconfig"; path = "Target Support Files/Pods-YLBModule_Example/Pods-YLBModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +158,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				BEBE778D242F63F5008C785E /* YLBModule.h */,
 			);
 			name = "Example for YLBModule";
 			path = YLBModule;
@@ -225,8 +227,8 @@
 		BE3ABB4D241A84EC005911C0 /* YLBTabTwoModule */ = {
 			isa = PBXGroup;
 			children = (
-				BE3ABB4E241A84EC005911C0 /* YLBTabTwoModule.m */,
 				BE3ABB4F241A84EC005911C0 /* YLBTabTwoModule.h */,
+				BE3ABB4E241A84EC005911C0 /* YLBTabTwoModule.m */,
 			);
 			path = YLBTabTwoModule;
 			sourceTree = "<group>";
@@ -234,8 +236,8 @@
 		BE3ABB50241A84EC005911C0 /* YLBMyModule */ = {
 			isa = PBXGroup;
 			children = (
-				BE3ABB51241A84EC005911C0 /* YLBMyModule.m */,
 				BE3ABB52241A84EC005911C0 /* YLBMyModule.h */,
+				BE3ABB51241A84EC005911C0 /* YLBMyModule.m */,
 			);
 			path = YLBMyModule;
 			sourceTree = "<group>";
@@ -243,9 +245,9 @@
 		BE3ABB53241A84EC005911C0 /* YLBHomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				BE3ABB56241A84EC005911C0 /* YLBHomeController.h */,
 				BE3ABB54241A84EC005911C0 /* YLBHomeController.m */,
 				BE3ABB55241A84EC005911C0 /* YLBHomeModule.h */,
-				BE3ABB56241A84EC005911C0 /* YLBHomeController.h */,
 				BE3ABB57241A84EC005911C0 /* YLBHomeModule.m */,
 			);
 			path = YLBHomeModule;
@@ -254,8 +256,8 @@
 		BE3ABB58241A84EC005911C0 /* YLBViewModule */ = {
 			isa = PBXGroup;
 			children = (
-				BE3ABB59241A84EC005911C0 /* YLBViewController.m */,
 				BE3ABB5A241A84EC005911C0 /* YLBViewController.h */,
+				BE3ABB59241A84EC005911C0 /* YLBViewController.m */,
 			);
 			path = YLBViewModule;
 			sourceTree = "<group>";
