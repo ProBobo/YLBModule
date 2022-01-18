@@ -10,6 +10,7 @@
 
 @interface YLBServiceManager ()
 @property (nonatomic, strong) NSMutableDictionary *totalServiceDic;
+@property (nonatomic, strong) NSMutableDictionary *totalTargetDic;
 @property (nonatomic, strong) NSRecursiveLock *lock;
 @end
 
@@ -45,6 +46,13 @@ static NSString * const kImpl = @"impl";
     return _totalServiceDic;
 }
 
+- (NSMutableDictionary *)totalTargetDic {
+    if (!_totalTargetDic) {
+        _totalTargetDic = [NSMutableDictionary dictionary];
+    }
+    return _totalTargetDic;
+}
+
 - (NSDictionary *)transcriptServiceDic {
     [self.lock lock];
     NSDictionary *dic = [self.totalServiceDic copy];
@@ -71,6 +79,11 @@ static NSString * const kImpl = @"impl";
     NSString *value = NSStringFromClass(implClass);
     if (key.length > 0 && value.length > 0) {
         [self.lock lock];
+        /*
+         @{
+             @"service":@"implClass"
+         }
+         */
         [self.totalServiceDic addEntriesFromDictionary:@{key:value}];
         [self.lock unlock];
     }
@@ -93,6 +106,37 @@ static NSString * const kImpl = @"impl";
     return implInstance;
 }
 
+- (void)impService:(Protocol *)service target:(nonnull id)target {
+    //参数不能为空
+    if (!service || !target) {
+        return;
+    }
+    //一个对象对应多个方法
+
+    NSMutableArray *targetArray = [self getImpTargetArray:service];
+    id value = target;
+    BOOL isContain = NO;
+    for (int i = 0; i < targetArray.count; i++) {
+        if ([targetArray containsObject:target]) {
+            isContain = YES;
+        }
+    }
+    if (isContain == NO) {
+        /*
+         如果数组只想保留一个对象，则可以使用[targetArray removeAllObjects];
+         */
+        [targetArray removeAllObjects];
+        [targetArray addObject:value];
+        NSString *key = NSStringFromProtocol(service);
+        [self.totalTargetDic setValue:targetArray forKey:key];
+    }
+}
+
+- (NSMutableArray *)impOfProtocol:(Protocol *)service {
+    NSMutableArray *targetArray = [self getImpTargetArray:service];
+    return targetArray;
+}
+
 - (BOOL)isExistService:(Protocol *)service {
     NSString *key = NSStringFromProtocol(service);
     NSString *implName = [[self transcriptServiceDic] objectForKey:key];
@@ -109,6 +153,27 @@ static NSString * const kImpl = @"impl";
         return NSClassFromString(implName);
     }
     return nil;
+}
+
+- (NSMutableArray *)getImpTargetArray:(Protocol *)service {
+    NSString *key = NSStringFromProtocol(service);
+    
+    NSMutableArray *targetArray = [self.totalTargetDic objectForKey:key];
+    NSMutableArray *resultArray = [@[] mutableCopy];
+    //判断是否实现协议，如果实现了协议，返回对象
+    for (int i = 0; i < targetArray.count; i++) {
+        id target = [targetArray objectAtIndex:i];
+        if (target) {
+            [resultArray addObject:target];
+        }
+    }
+    targetArray = resultArray;
+    [self.totalTargetDic setValue:targetArray forKey:key];
+    
+    if (targetArray.count > 0) {
+        return targetArray;
+    }
+    return [@[] mutableCopy];
 }
 
 @end

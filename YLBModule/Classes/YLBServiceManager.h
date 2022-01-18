@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerService:(Protocol *)service implClass:(Class)implClass;
 - (id)createService:(Protocol *)service;
+- (void)impService:(Protocol *)service target:(id)target;
+- (NSMutableArray *)impOfProtocol:(Protocol *)service;
 @end
 
 NS_ASSUME_NONNULL_END
