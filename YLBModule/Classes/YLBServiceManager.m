@@ -156,6 +156,10 @@ static NSString * const kImpl = @"impl";
 }
 
 - (NSMutableArray *)getImpTargetArray:(Protocol *)service {
+    /*
+     可以把协议以及协议里方法完全字符串，然后放入json文件中，以实现Module之间彻底的独立运行，不再需要引入.h文件。
+     通过NSStringFromProtocol和NSSelectorFromString方法。
+     */
     NSString *key = NSStringFromProtocol(service);
     
     NSMutableArray *targetArray = [self.totalTargetDic objectForKey:key];
