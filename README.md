@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'YLBModule'
 ```
 
+获取最新代码：
+```ruby
+pod 'YLBModule', :git => 'https://github.com/ProBobo/YLBModule.git'
+```
+
 ## Author
 
 ProBobo, 564885081@qq.com
