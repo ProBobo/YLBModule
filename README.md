@@ -138,5 +138,5 @@ registerModuleClass方法通过数组moduleArray存储模块类，再对moduleAr
 **服务注册：模块通信**  
 registerService方法通过可变字典totalServiceDic存储`协议`和`类`的对应关系。  
 
-**服务注册：模块消息回传**。
+**服务注册：模块消息回传**  
 impService方法通过可变字典totalTargetDic建立包含`类`的数组targetArray和协议的对应关系。
